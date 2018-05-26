@@ -1,47 +1,103 @@
 
 
-
-
 <template>
-	<div class="listingCard horizontal card">
-		<div class="card-image">
-			<img class="listingImage" src="../Images&Icons/binary-Code-Wallpaper.jpeg" />
-
-			<div class="row">
-				<div class="listingPrice">$589,000</div>
-				<div class="listingLocation card-content">Rawlins, Wyoming</div>
-				<div class="listingRooms card-content">5 bedrooms</div>
-				<div class="listingAddress card-content">1910 7th st</div>
-				<div class="listingType card-content">Town-House</div>
+	<!--start of listing -->
+	<div class="listingCard card">
+		<div class="row">
+			<div class="col s12 m12">
+				<div class="card-image">
+					<!-- PUT ANCHOR TAG HERE THAT ROUTES TO INFORMATION PAGE._______________________________ -->
+					<img class="listingImage" src="../Images&Icons/binary-Code-Wallpaper.jpeg" />
+					<span class="card-title">
+						<div class="listingPrice">$590,000</div>
+						<div class="listingLocation">Rawlins, Wyoming</div>
+					</span>
+				</div>
 			</div>
-			<!-- <label class="locationLabel listingLabels deep-purple darken-1">Location:</label> -->
-			<!-- <label class="addressLabel listingLabels deep-purple darken-1">Address:</label> -->
-			<!-- <label class="typeLabel listingLabels deep-purple darken-1">Home-type:</label> -->
-			<!-- <label class="RoomsLabel listingLabels deep-purple dar    ken-1">Bedrooms:</label> -->
-
-			<!-- <label class="SquareFootageLabel listingLabels deep-purple darken-1">Size
-          <div style="font-size:11px; display: inline-block">(SquareFootage):</div>
-        </label> -->
-
+			<button class="waves-effect waves-light deep-purple darken-3 activator">
+				<i>More Information</i>
+			</button>
+		</div>
+		<!-- Start of Main listing Information -->
+		<div class="mainInfoContainer">
 			<div class="row">
-				<div class="listingSquareFooteage card-content">420sq ft</div>
-				<label class="lotSizeLabel listingLabels deep-purple darken-1">Lot Size:</label>
-				<div class="listingLotSize card-content">2000 sq ft</div>
+				<div class="listingRooms card-content">5 bds</div>
+				<div class="listingHeating card-content">3.5 ba</div>
+				<div class="listingSquareFooteage card-content">420sqft</div>
+				<div class="listingAddress card-content">1910 7th st</div>
+				<div class="listingType card-content">Apartment</div>
+				<div class="listingKind card-content">For sale by owner</div>
 			</div>
 		</div>
+		<!-- Start of Quick Listing Information -->
+		<div class="card-reveal">
+			<!-- Title for card reveal -->
+			<span class="card-title grey-text text-darken-4">More Information
+				<i class="material-icons right">close</i>
+			</span>
 
-		<div class="row">
-			<label class="heatingLabel listingLabels deep-purple darken-1">Heating System</label>
-			<div class="listingHeating card-content">Forced Air</div>
-			<label class="heatingLabel listingLabels deep-purple darken-1">Heating System</label>
-			<div class="listingHeating card-content">Forced Air</div>
-			<label class="CoolingLabel listingLabels deep-purple darken-1">Cooling System:</label>
-			<div class="listingCooling card-content">Air Conditioning</div>
+			<div class="cardRevealInfoContainer">
+				<div class="row">
+					<label class="descriptionLabel listingLabels ">Description :</label>
+					<div class="listingDescription card-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit.isi dolorem consequuntur rem inventore sit similique itaque.</div>
+				</div>
+
+				<div class="row">
+					<label class="lotSizeLabel listingLabels ">Lot Size :</label>
+					<div class="listingLotSize card-content">2000 sq ft</div>
+				</div>
+
+				<div class="row">
+					<label class="heatingLabel listingLabels ">Heating System :</label>
+					<div class="listingHeating card-content">Forced Air</div>
+				</div>
+
+				<div class="row">
+					<label class="CoolingLabel listingLabels ">Cooling System :</label>
+					<div class="listingCooling card-content">Air Conditioning asdf asdf asdf asd</div>
+				</div>
+
+				<div class="row">
+					<label class="flooringLabel listingLabels ">Flooring :</label>
+					<div class="listingFlooring card-content">Hardwood and carpet mixed</div>
+				</div>
+
+				<div class="row">
+					<label class="parkingLabel listingLabels ">Parking :</label>
+					<div class="listingParking card-content">2 door garage</div>
+				</div>
+
+				<div class="row">
+					<label class="yearBuiltLabel listingLabels ">Year built :</label>
+					<div class="listingyearBuilt card-content">1994</div>
+				</div>
+
+				<div class="row">
+					<label class="pricePerSQFTLabel listingLabels ">Price per sq. ft. :</label>
+					<div class="listinPricePerSQFT card-content">2000 sq ft</div>
+				</div>
+
+				<div class="row">
+					<label class="ZipCodeLabel listingLabels">ZIP Code :</label>
+					<div class="listingZipCode card-content">82070</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+// document.addEventListener('.btn-floating', function() {
+//     var elems = document.querySelectorAll('.tooltipped');
+//     var instances = M.Tooltip.init(elems, options);
+//   });
+
+  // $(document).ready( function(){
+  //   $('.tooltipped').hover(function(){
+  //     alert('hover');
+  //   });
+  // });
+
 export default {
   name: 'Home',
   data () {
@@ -53,11 +109,8 @@ export default {
     this.msg = 'TEST'
   },
   methods: {
-
   }
-
 }
-
 
 </script>
 
@@ -69,51 +122,163 @@ body {
   margin: 0;
 }
 
+/* Personal Custom classes */
+.border-bottom {
+  border-bottom: 2px solid purple;
+}
+
+/* Entire card/conatiner */
 .card {
-  width: 300px;
-  height: 300px;
-  background-color: lightpurple;
+  display: inline-block;
+  width: 340px;
+  height: auto;
+  margin: 10px;
+  padding: 0px;
+  padding-bottom: 5px;
+}
+@media screen and (max-width: 800px) {
+  .card {
+    width: 100%;
+    margin: 0;
+    margin-top: 20px;
+  }
+}
+/* Row with all card information */
+.row {
+  display: inline-table;
+  padding: 0;
+  margin: 0;
+}
+/* Main image of listing */
+.card-image {
+  display: inline-block;
+  margin-left: -10px;
+  width: 106%;
+  height: auto;
+}
+/* Container for listing location and price displayed on teh image */
+.card-title {
+  width: 80%;
+  display: inline-grid;
 }
 
-img {
-  /* display: inline-block; */
-  width: 300px;
-  height: 300px;
+/* Price that shows up on Listing Image */
+.listingPrice {
+  height: 20px;
 }
 
-.card-content {
+/* Location that Shows on top of Listing Image */
+.listingLocation {
+  display: inline-block;
+  width: 100%;
+  height: 20px;
+  color: white;
+  font-size: 75%;
+  margin-top: 15px;
+}
+
+.mainInfoContainer {
+  display: inline-block;
+  height: auto;
+  width: 100%;
+}
+/* Content below listing Image bds, ba, size, etc. */
+.mainInfoContainer .card-content {
+  display: inline-block;
+  padding: 20px;
+  width: auto;
+  height: 20px;
+  font-size: 90%;
+  margin: 0px;
+  margin-bottom: -10px;
+  color: black;
+}
+
+/* Start of car reveal__________________________________________________________________________________________________________________________________ */
+
+/* buttons to reveal extra information on card */
+.activator {
+  width: 142px;
+  height: 30px;
+  color: white;
+  float: right;
+  margin-right: 15px;
+  margin-top: -55px;
+  border: none;
+}
+
+.activator i {
+  font-size: 90%;
   display: block;
-  font-size: 100%;
-  width: 200px;
-  height: 50px;
-  padding-bottom: 15px;
-  color: black;
-  text-align: center;
+  width: 142px;
+  height: 30px;
+  margin-left: -6px;
+  margin-top: -1px;
+  padding-top: 6px;
+}
+.activator :hover {
+  background-color: purple;
+  border: 5px solid purple;
+  padding-top: 1px;
 }
 
-.listingLabels {
-  font-size: 120%;
-  width: 200px;
-  height: 50px;
-  color: black;
-  display: block;
-  text-align: center;
-  padding-top: 10px;
+/* x button to hide card reveal */
+.card-reveal .material-icons {
+  margin-right: -50px;
+  margin-top: -35px;
 }
 
-label.locationLabel {
-  color: black;
-  font-size: 120%;
+/* Container for actual extra information displayed on Card Reveal */
+cardRevealInfoContainer {
+  background-color: grey;
 }
 
-/* .listingCard {
-      width: 100%;
-      height: auto;
-      background-color: lightpurple;
-    } */
-/* Start of Card information
+.card-reveal .row {
+  display: inline-table;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border: 3px solid purple;
+  border-bottom: none;
+  background-color: lightblue;
+  /* border-collapse: separate; */
+}
 
+.card-reveal .row:last-child {
+  border-bottom: 3px solid purple;
+}
 
+/* Styling for label with the Card Reveal */
+.card-reveal .listingLabels {
+  font-size: 110%;
+  width: 155px;
+  height: 40px;
+  color: black;
+  display: inline-block;
+  padding: 10px;
+  font-weight: bold;
+}
 
-    */
+/* Actual information within card reveal */
+.card-reveal .card-content {
+  display: inline-block;
+  width: 100px;
+  height: auto;
+  vertical-align: top;
+  margin-top: 10px;
+  /* margin-left: 30px; */
+  min-height: 40px;
+  font-size: 90%;
+  padding: 0px;
+  color: black;
+}
+
+/* Title for Card Reveal "More Information" */
+/* .card-reveal, */
+.card-title {
+  display: inline-grid;
+  padding-left: 50px;
+  width: 85%;
+}
 </style>
